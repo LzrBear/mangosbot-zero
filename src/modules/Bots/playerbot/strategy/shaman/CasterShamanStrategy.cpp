@@ -63,8 +63,6 @@ void CasterShamanStrategy::InitTriggers(std::list<TriggerNode*> &triggers)
 
 void CasterAoeShamanStrategy::InitTriggers(std::list<TriggerNode*> &triggers)
 {
-    MeleeAoeShamanStrategy::InitTriggers(triggers);
-
     triggers.push_back(new TriggerNode(
         "light aoe",
         NextAction::array(0, new NextAction("chain lightning", 25.0f), NULL)));
